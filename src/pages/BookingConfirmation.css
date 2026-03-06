@@ -1,0 +1,238 @@
+.booking-container {
+    padding: 24px 16px 120px;
+    /* offset bottom nav */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.booking-header {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ticket-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #1e222d;
+    /* Solid ticket background */
+    border: 1px solid var(--card-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.ticket-top {
+    padding: 32px 24px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 191, 255, 0.1), transparent);
+}
+
+.ticket-top h2 {
+    font-size: 2.2rem;
+    color: var(--neon-blue);
+    margin-bottom: 8px;
+}
+
+.level-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.ticket-divider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin: -20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.hole {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-dark);
+    /* match app body bg */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.hole-left {
+    left: -20px;
+    box-shadow: inset -4px 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.hole-right {
+    right: -20px;
+    box-shadow: inset 4px 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.dash-line {
+    flex: 1;
+    margin: 0 24px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.ticket-body {
+    padding: 40px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: 250px;
+    justify-content: center;
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.qr-instruction {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 250px;
+    line-height: 1.5;
+}
+
+.scan-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 8px;
+}
+
+.scanning-text {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.scanner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.scanner-line {
+    width: 100%;
+    height: 2px;
+    background: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+    animation: scan 1.5s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+.success-scan-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.success-icon {
+    color: #4caf50;
+    filter: drop-shadow(0 0 20px rgba(76, 175, 80, 0.4));
+    margin-bottom: 8px;
+}
+
+.success-scan-section h3 {
+    font-size: 1.5rem;
+    color: #4caf50;
+}
+
+.success-scan-section p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.ticket-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--card-border);
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.action-btn:hover {
+    color: var(--text-primary);
+}
+
+.icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover .icon-wrap {
+    background: var(--neon-blue);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px var(--neon-blue-glow);
+}

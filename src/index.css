@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+:root {
+  --bg-dark: #111319;
+  --bg-gradient: linear-gradient(135deg, #1a1e27 0%, #111319 100%);
+  --neon-blue: #00bfff;
+  --neon-blue-dark: #0088cc;
+  --neon-blue-glow: rgba(0, 191, 255, 0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #8c96a8;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.08);
+  
+  /* Status Colors */
+  --status-available: #1e90ff; /* Blue */
+  --status-booked: #3a3f50; /* Gray/Dark */
+  --status-waiting: #ff9800; /* Orange */
+  
+  font-family: 'Tajawal', system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-dark);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  display: block;
+  overflow-x: hidden;
+}
+
+/* Utility to hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Glassmorphism Generic classes */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+}
+
+/* Base Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--neon-blue);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 24px;
+  box-shadow: 0 4px 15px var(--neon-blue-glow);
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px var(--neon-blue-glow);
+  transform: translateY(-2px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.app-container {
+  min-height: 100vh;
+  padding-bottom: 90px; /* Space for bottom nav */
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

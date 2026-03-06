@@ -1,0 +1,152 @@
+.exit-container {
+    padding: 24px 16px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.checkout-panel {
+    padding: 32px 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.receipt-header {
+    text-align: center;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 16px;
+}
+
+.receipt-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.plate-num {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.plate-num span {
+    font-weight: 800;
+    color: var(--neon-blue);
+    background: rgba(0, 191, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 8px;
+    letter-spacing: 2px;
+}
+
+.receipt-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.divider {
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    margin: 8px 0;
+}
+
+.total-row {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    align-items: center;
+}
+
+.total-amount {
+    font-size: 1.8rem;
+    color: var(--neon-blue);
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.pay-method-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 16px;
+    color: var(--text-primary);
+}
+
+.pay-method-btn:hover {
+    background: rgba(0, 191, 255, 0.1);
+    border-color: var(--neon-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.2);
+}
+
+.success-panel {
+    padding: 40px 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.success-icon {
+    color: #4caf50;
+    filter: drop-shadow(0 0 20px rgba(76, 175, 80, 0.4));
+    margin-bottom: 16px;
+}
+
+.success-panel h2 {
+    font-size: 1.8rem;
+    color: #4caf50;
+}
+
+.success-panel p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.gate-animation {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid var(--card-border);
+    position: relative;
+    margin-top: 24px;
+}
+
+.gate-bar {
+    width: 100px;
+    height: 8px;
+    background: var(--neon-blue);
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform-origin: left center;
+    border-radius: 4px;
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+}
+
+.gate-bar.open {
+    transform: rotate(-90deg) translateX(50px);
+}

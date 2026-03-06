@@ -1,0 +1,46 @@
+.timer-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-svg {
+    transform: rotate(-90deg);
+    /* Start from top */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.timer-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 8;
+}
+
+.timer-progress {
+    fill: none;
+    stroke-width: 8;
+    filter: drop-shadow(0 0 6px var(--neon-blue-glow));
+}
+
+.timer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.timer-time {
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
